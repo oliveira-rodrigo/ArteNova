@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context="${packageName}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:background="#dedede"
+        android:paddingLeft="50dp"
+        android:paddingTop="35dp"
+        android:text="Acabamentos"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageViewVoltar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="35dp"
+        android:onClick="backActivity"
+        android:src="@drawable/ico_arrow_left" />
+
+    <ImageView
+        android:id="@+id/imageViewContato"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="121dp"
+        android:layout_marginTop="35dp"
+        android:onClick="contatoActivity"
+        android:src="@drawable/ico_email" />
+
+    <ImageView
+        android:id="@+id/imageViewHome"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="187dp"
+        android:layout_marginTop="35dp"
+        android:onClick="homeActivity"
+        android:src="@drawable/ico_home" />
+
+    <ImageView
+        android:id="@+id/imageViewFavorito"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="253dp"
+        android:layout_marginTop="35dp"
+        android:onClick="backActivity"
+        android:src="@drawable/ico_star_favorite" />
+
+    <ImageView
+        android:id="@+id/imageViewPedido"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="319dp"
+        android:layout_marginTop="35dp"
+        android:onClick="contatoActivity"
+        android:src="@drawable/ico_list" />
+
+    <ImageView
+        android:id="@+id/imageViewEmail"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="385dp"
+        android:layout_marginTop="35dp"
+        android:onClick="acabamentosActivity"
+        android:src="@drawable/ico_arroba" />
+
+    <com.br.artenova.Helpers.HorizontialListView
+        android:id="@+id/horListView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:text="TITULO" />
+
+    <ImageView
+        android:id="@+id/imageViewFechar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="130dp"
+        android:onClick="backActivity"
+        android:src="@drawable/ico_arrow_left" />
+
+    <ImageView
+        android:id="@+id/imageViewAcabamento"
+        android:layout_width="480dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ico_arrow_left" />
+
+    <ImageView
+        android:id="@+id/imageViewLeft"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/ico_arrow_left" />
+
+    <ImageView
+        android:id="@+id/imageViewRight"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/ico_arrow_left" />
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        class="com.br.artenova.MenuFragment"
+        tools:layout="@layout/menu_fragment" >
+    </fragment>
+
+</RelativeLayout>

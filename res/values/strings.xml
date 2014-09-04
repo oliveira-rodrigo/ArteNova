@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Arte Nova</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="Login">Login:</string>
+    <string name="attempts">Attempts Left:</string>
+    <string name="title_activity_home">Home</string>
+    <string name="text_activity_home">arte nova Elegância na forma e na função</string>
+    <string name="title_activity_ogrupo">|  O Grupo</string>
+    <string name="cabecalho_ogrupo">|  O GRUPO</string>
+    <string name="title_activity_contato">Contato</string>
+    <string name="cabecalho_contato">Contato</string>
+    <string name="cabecalho_artenova">Arte Nova  | PRODUTOS</string>
+    <string name="title_activity_arte_nova">Arte Nova  | PRODUTOS</string>
+    <string name="title_activity_produtos">ProdutosActivity</string>
+    <string name="title_activity_detalhes_produto">DetalhesProdutoActivity</string>
+    <string name="title_activity_info_produto">InfoProdutoActivity</string>
+    <string name="title_activity_acabamentos">AcabamentosActivity</string>
+    <string name="title_activity_produto_popup">ProdutoPopupActivity</string>
+    <string name="title_activity_acabamento_popup">AcabamentoPopupActivity</string>
+    <string name="title_activity_favoritos">FavoritosActivity</string>
+    <string name="title_activity_pedidos">PedidosActivity</string>
+    <string name="Is_Autenticado">0</string>
+
+</resources>

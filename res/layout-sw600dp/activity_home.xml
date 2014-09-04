@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="1024dp"
+    android:layout_height="600dp"
+    android:background="#dedede"
+    tools:context=".MainActivity" >
+
+    <ImageSwitcher
+        android:id="@+id/imageSwitcher1"
+        android:layout_width="match_parent"
+        android:layout_height="530dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/background_light" >
+    </ImageSwitcher>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="270dp"
+        android:background="#D9000000"
+        android:paddingLeft="100dp"
+        android:paddingTop="55dp"
+        android:text="@string/text_activity_home"
+        android:textColor="@android:color/white" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="198dp"
+        android:layout_marginRight="170dp"
+        android:onClick="changeImage"
+        android:src="@drawable/koala" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="198dp"
+        android:layout_marginRight="95dp"
+        android:onClick="changeImage"
+        android:src="@drawable/lighthouse" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="198dp"
+        android:layout_marginRight="20dp"
+        android:onClick="changeImage"
+        android:src="@drawable/penguins" />
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="125dp"
+        class="com.br.artenova.MenuFragment"
+        tools:layout="@layout/menu_fragment" >
+    </fragment>
+
+</RelativeLayout>

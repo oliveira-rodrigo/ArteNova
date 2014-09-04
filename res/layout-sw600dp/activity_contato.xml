@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="1280dp"
+    android:layout_height="800dp"
+    android:background="#dedede"
+    tools:context="${packageName}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/textViewCabecalho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:paddingTop="100dp"
+        android:text="@string/cabecalho_contato"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageViewCabecalho"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ico_email" />
+
+    <TextView
+        android:id="@+id/textViewArteNova"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:paddingTop="300dp"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/imageContatoArteNova"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="400dp"
+        android:onClick="openPopup"
+        android:src="@drawable/ico_email" />
+
+    <TextView
+        android:id="@+id/textViewUnue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="300dp"
+        android:paddingTop="300dp"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/imageContatoUnue"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="400dp"
+        android:onClick="openPopup"
+        android:src="@drawable/ico_email" />
+
+    <TextView
+        android:id="@+id/textViewSteel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="550dp"
+        android:paddingTop="300dp"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/imageContatoSteel"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="550dp"
+        android:layout_marginTop="400dp"
+        android:onClick="openPopup"
+        android:src="@drawable/ico_email" />
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="125dp"
+        class="com.br.artenova.MenuFragment"
+        tools:layout="@layout/menu_fragment" >
+    </fragment>
+
+</RelativeLayout>

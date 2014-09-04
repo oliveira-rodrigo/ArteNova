@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.br.artenova"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="17" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.br.artenova.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.br.artenova.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name="com.br.artenova.OGrupoActivity"
+            android:label="@string/title_activity_ogrupo"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name="com.br.artenova.ContatoActivity"
+            android:label="@string/title_activity_contato"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name="com.br.artenova.ArteNovaActivity"
+            android:label="@string/title_activity_arte_nova" >
+        </activity>
+        <activity
+            android:name="com.br.artenova.ProdutosActivity"
+            android:label="@string/title_activity_produtos" >
+        </activity>
+        <activity
+            android:name="com.br.artenova.DetalhesProdutoActivity"
+            android:label="@string/title_activity_detalhes_produto" >
+        </activity>
+        <activity
+            android:name="com.br.artenova.InfoProdutoActivity"
+            android:label="@string/title_activity_info_produto" >
+        </activity>
+        <activity
+            android:name="com.br.artenova.AcabamentosActivity"
+            android:label="@string/title_activity_acabamentos" >
+        </activity>
+        <activity
+            android:name="com.br.artenova.ProdutoPopupActivity"
+            android:label="@string/title_activity_produto_popup" >
+        </activity>
+        <activity
+            android:name="com.br.artenova.AcabamentoPopupActivity"
+            android:label="@string/title_activity_acabamento_popup" >
+        </activity>
+        <activity
+            android:name="com.br.artenova.FavoritosActivity"
+            android:label="@string/title_activity_favoritos" >
+        </activity>
+        <activity
+            android:name="com.br.artenova.PedidosActivity"
+            android:label="@string/title_activity_pedidos" >
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="logo_arte_nova">Arte Nova</string>
+    <string name="logo_unue">Unue</string>
+    <string name="logo_steel">Steel</string>
+    <string name="img_login">Login</string>
+    <string name="img_senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="hint_senha">Senha</string>
+    <string name="hint_login">Login</string>
+
+</resources>
