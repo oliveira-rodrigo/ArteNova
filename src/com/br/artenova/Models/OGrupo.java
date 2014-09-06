@@ -6,16 +6,18 @@ import android.content.Context;
 
 public class OGrupo extends SugarRecord<OGrupo> {
 
-	String Descricao;
-	String Imagem_1;
-	String Imagem_2;
-	String Imagem_3;
+	private Integer ID;
+	private String Descricao;
+	private String Imagem_1;
+	private String Imagem_2;
+	private String Imagem_3;
 
 	public OGrupo(Context context) {
 	}
 
-	public OGrupo(String Descricao, String Imagem_1, String Imagem_2,
-			String Imagem_3, Context context) {
+	public OGrupo(Integer ID, String Descricao, String Imagem_1, String Imagem_2,
+			String Imagem_3) {
+		this.ID = ID;
 		this.Descricao = Descricao;
 		this.Imagem_1 = Imagem_1;
 		this.Imagem_2 = Imagem_2;

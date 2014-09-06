@@ -3,9 +3,13 @@ package com.br.artenova;
 import java.util.List;
 import java.util.Map;
 
-import com.br.artenova.Data.DataBaseHelper;
+import com.br.artenova.Data.OGrupoRepository;
+import com.br.artenova.Data.SQLiteDatabaseHelper;
+import com.br.artenova.Helpers.VersionUtils;
 import com.br.artenova.Models.OGrupo;
 
+import android.content.Context;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Html;
@@ -22,31 +26,38 @@ public class OGrupoActivity extends BaseActivity {
 	private ImageView imgViewSmall2;
 	private ImageView imgViewSmall3;
 	private TextView textView;
-	private DataBaseHelper dbHelper;
-	private OGrupo ogrupo;
-	
+	private OGrupo ogrupo = null;
+	private OGrupoRepository ogrupoRep = null;
+	private SQLiteDatabaseHelper helper = null;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ogrupo);
-		
-		List<OGrupo> grupo = OGrupo.listAll(OGrupo.class);
-		
-		imgViewBig = (ImageView) findViewById(R.id.imageViewBig);
-		imgViewSmall1 = (ImageView) findViewById(R.id.imageViewSmall1);
-		imgViewSmall2 = (ImageView) findViewById(R.id.imageViewSmall2);		
-		imgViewSmall3 = (ImageView) findViewById(R.id.imageViewSmall3);
-		textView = (TextView) findViewById(R.id.textView);
-		
-		String str ="<h2>Title</h2><br><p>Description here</p><div style='height: 1000px; background: Red'>teste</div>";
-		for(int i=0; i<10;i++)
-			str +="<br/><h2>Title</h2><br><p>Description here</p><div style='height: 1000px; background: Red'>teste</div>";
-		Spanned sp = Html.fromHtml(str);
-		textView.setText(grupo.get(0).getDescricao());
-		
-		imgViewBig.setImageDrawable(imgViewSmall1.getDrawable());
+
+		Context context = getApplicationContext();
+
+		try {
+			this.helper = new SQLiteDatabaseHelper(context, "Banco_ArteNova",
+					null, VersionUtils.getVersionCode(context));
+			this.helper.onCreate(this.helper.getWritableDatabase());
+			this.ogrupoRep = new OGrupoRepository(helper);
+			this.ogrupo = ogrupoRep.selectFirst();
+
+			imgViewBig = (ImageView) findViewById(R.id.imageViewBig);
+			imgViewSmall1 = (ImageView) findViewById(R.id.imageViewSmall1);
+			imgViewSmall2 = (ImageView) findViewById(R.id.imageViewSmall2);
+			imgViewSmall3 = (ImageView) findViewById(R.id.imageViewSmall3);
+			textView = (TextView) findViewById(R.id.textView);
+
+			textView.setText(ogrupo.getDescricao());
+			imgViewBig.setImageDrawable(imgViewSmall1.getDrawable());
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-	
+
 	public void changeImage(View view) {
 		Drawable drawable = null;
 

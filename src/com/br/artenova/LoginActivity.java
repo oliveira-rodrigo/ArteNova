@@ -23,9 +23,8 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
-import com.br.artenova.Data.DataBaseHelper;
-import com.br.artenova.Data.SQLiteDatabaseHelper;
 import com.br.artenova.Helpers.VersionUtils;
+import com.br.artenova.Data.*;
 
 import android.app.Activity;
 import android.content.Context;
@@ -53,6 +52,7 @@ public class LoginActivity extends BaseActivity {
 	private EditText password = null;
 	// private Button login;
 	private SQLiteDatabaseHelper helper = null;
+	private JsonHelper jsonHelper = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +66,7 @@ public class LoginActivity extends BaseActivity {
 					null, VersionUtils.getVersionCode(context));
 
 			this.helper.onCreate(this.helper.getWritableDatabase());
-			showMessage("Banco Criado");
+			//showMessage("Banco Criado");
 
 		} catch (NameNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -218,10 +218,8 @@ public class LoginActivity extends BaseActivity {
 					json = new JSONObject(responseText);
 
 					//Log.d("json", responseText);
-
-					JSONObject jsonGrupo = json.getJSONObject("Grupo");
-					// showMessage(newJson.getString("Descricao").toString());
-					//Log.d("Grupo Descricao", jsonGrupo.get("Descricao").toString());
+					
+					this.jsonHelper = new JsonHelper(json, helper);					
 				}
 
 			} catch (ClientProtocolException e) {
